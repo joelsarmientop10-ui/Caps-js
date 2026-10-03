@@ -50,7 +50,7 @@ Abre `js/data.js` y copia uno de los objetos de `DATA.productos`. Cambia:
   id: 'mi-nueva-gorra',           // único, minúsculas, sin tildes, con guiones
   nombre: 'Mi Nueva Gorra',
   tipo: 'snapback',               // snapback | trucker | dad | beisbolera | bucket
-  precio: 29.90,
+  precio: 50000,
   precioAntes: null,              // número si hay oferta, null si no
   etiqueta: null,                 // 'nuevo' | 'mas-vendida' | 'oferta' | null
   destacada: false,
@@ -90,17 +90,29 @@ Si la foto no carga, la página vuelve al dibujo SVG automáticamente.
 
 ---
 
-## Cómo cambiar los colores de la marca
+## Paleta de Diseño Visual (Dark Premium & Luxury)
 
-Edita las variables en la sección `:root` de `css/styles.css`:
+La interfaz utiliza una estética oscura refinada con acentos dorados controlados (5–10%):
 
 ```css
 :root {
-  --tiza:    #F7F8F6;   /* fondo principal */
-  --marino:  #14264B;   /* texto y botones primarios */
-  --amarillo:#FFC83D;   /* WhatsApp y etiqueta "Más vendida" */
-  --rojo:    #C42336;   /* ofertas */
-  ...
+  /* Fondos */
+  --bg-deep:        #0A0A0A;  /* Fondo general / Body */
+  --bg-section:     #0D0D0D;  /* Secciones alternas */
+  --bg-card:        #121212;  /* Tarjetas, paneles y modales */
+  --bg-inner:       #181818;  /* Escenarios e inputs internos */
+  --bg-footer:      #080808;  /* Pie de página */
+
+  /* Textos */
+  --text-primary:   #F5F5F5;  /* Títulos y textos principales */
+  --text-body:      #D0D0D0;  /* Párrafos cómodos de leer */
+  --text-secondary: #B8B8B8;  /* Subtítulos y apoyo */
+  --text-tertiary:  #8A8A8A;  /* Auxiliares y metadatos */
+
+  /* Acento Dorado Exclusivo */
+  --gold-primary:   #C9A227;  /* Dorado principal (botones, activos) */
+  --gold-hover:     #D4AF37;  /* Dorado suave en hover */
+  --gold-champagne: #E6D5A8;  /* Champagne sutil */
 }
 ```
 
@@ -109,25 +121,44 @@ Edita las variables en la sección `:root` de `css/styles.css`:
 ## Cómo crear la imagen para compartir en redes (og-image)
 
 Crea un archivo `assets/og-image.png` de **1200×630 px** con:
-- Fondo en el color de la marca (`#14264B`)
-- El nombre de la tienda en tipografía grande
+- Fondo en negro profundo (`#0A0A0A`)
+- El logotipo de la marca
+- Tipografía en blanco/champagne
 - Una gorra o las gorras destacadas
 
 Esta imagen aparece cuando alguien comparte el enlace en WhatsApp, Instagram o Twitter.
 
 ---
 
-## Cómo publicar gratis
+## Cómo publicar en GitHub Pages con Dominio Personalizado
 
-**GitHub Pages:**
-1. Crea un repositorio en GitHub y sube todos los archivos.
-2. Ve a *Settings → Pages → Source* y selecciona la rama `main`.
-3. Tu página quedará en `https://tu-usuario.github.io/nombre-del-repo`.
+### 1. Subir a GitHub
+1. Crea un repositorio en tu cuenta de GitHub (ej. `catalogo-gorras`).
+2. Sube todos los archivos de esta carpeta a la rama `main`.
+3. En tu repositorio, entra a **Settings → Pages**.
+4. En **Build and deployment → Branch**, selecciona `main` y la carpeta `/(root)`. Haz clic en **Save**.
+5. Tu catálogo ya estará publicado en: `https://<tu-usuario>.github.io/<tu-repositorio>/`.
 
-**Netlify:**
+### 2. Conectar tu Dominio Personalizado (ej. `capsjs.co` o `capsjs.com`)
+1. En GitHub, dentro de **Settings → Pages**:
+   - En el campo **Custom domain**, escribe tu dominio (por ejemplo: `capsjs.co`).
+   - Haz clic en **Save**. Esto generará automáticamente un archivo `CNAME` en el repositorio.
+2. En el panel de control de tu registrador donde compraste el dominio (Namecheap, Porkbun, GoDaddy, etc.), ve a la sección de **Gestión de DNS**:
+   - Agrega **4 registros tipo A** para tu dominio raíz:
+     - Tipo: `A` | Host/Nombre: `@` | Valor: `185.199.108.153`
+     - Tipo: `A` | Host/Nombre: `@` | Valor: `185.199.109.153`
+     - Tipo: `A` | Host/Nombre: `@` | Valor: `185.199.110.153`
+     - Tipo: `A` | Host/Nombre: `@` | Valor: `185.199.111.153`
+   - Agrega **1 registro CNAME** para el subdominio www:
+     - Tipo: `CNAME` | Host/Nombre: `www` | Valor: `<tu-usuario>.github.io.`
+3. Vuelve a **Settings → Pages** en GitHub y activa la casilla **Enforce HTTPS** (se habilita unos minutos después de propagarse el DNS y generará tu certificado de seguridad SSL gratis).
+
+---
+
+## Publicar gratis en Netlify (Alternativa rápida)
 1. Entra a [netlify.com](https://netlify.com) y crea una cuenta.
 2. Arrastra la carpeta entera al área de Netlify Drop.
-3. En segundos tendrás una URL pública.
+3. En segundos tendrás una URL pública y puedes vincular tu dominio en **Domain settings**.
 
 ---
 

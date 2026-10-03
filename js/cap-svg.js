@@ -51,23 +51,20 @@
   /** Calcula las 9 variables CSS de color para el escenario del inicio */
   function tokens(principal, secundario) {
     const lum = luminancia(principal);
-    const visor = secundario ? secundario : mezclar(principal, '#000000', 0.08);
-    const heroWord = lum > 0.7
-      ? mezclar(principal, '#FFFFFF', 0.64)
-      : mezclar(principal, '#FFFFFF', 0.64);
-    const heroBg = lum > 0.7
-      ? '#E6E9EC'
-      : mezclar(principal, '#FFFFFF', 0.80);
-    const heroWordFinal = lum > 0.7 ? '#D3D9DF' : heroWord;
+    const visor = secundario ? secundario : mezclar(principal, '#000000', 0.12);
+    // En la estética Dark Luxury, el fondo del hero es #0A0A0A con un matiz sutil del color (10%)
+    const heroBg = mezclar(principal, '#0A0A0A', 0.90);
+    // La palabra gigante "gorras" es una marca de agua oscura y elegante
+    const heroWordFinal = mezclar(principal, '#181818', 0.85);
 
     return {
       '--cap-main':        principal,
-      '--cap-shade':       mezclar(principal, '#000000', 0.22),
-      '--cap-light':       mezclar(principal, '#FFFFFF', 0.20),
-      '--cap-outline':     mezclar(principal, '#14264B', 0.55),
+      '--cap-shade':       mezclar(principal, '#000000', 0.28),
+      '--cap-light':       mezclar(principal, '#FFFFFF', 0.18),
+      '--cap-outline':     mezclar(principal, '#0A0A0A', 0.70),
       '--cap-visor':       visor,
-      '--cap-visor-shade': mezclar(visor, '#000000', 0.25),
-      '--cap-detail':      lum > 0.5 ? '#14264B' : '#FFFFFF',
+      '--cap-visor-shade': mezclar(visor, '#000000', 0.30),
+      '--cap-detail':      lum > 0.45 ? '#0A0A0A' : '#F5F5F5',
       '--hero-bg':         heroBg,
       '--hero-word':       heroWordFinal
     };

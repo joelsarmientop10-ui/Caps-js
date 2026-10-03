@@ -33,10 +33,11 @@
       return new Intl.NumberFormat(CONFIG.locale, {
         style: 'currency',
         currency: CONFIG.moneda,
-        minimumFractionDigits: 2
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
       }).format(valor);
     } catch (e) {
-      return CONFIG.moneda + ' ' + valor.toFixed(2);
+      return '$ ' + valor.toLocaleString('es-CO');
     }
   }
 
@@ -240,7 +241,7 @@
       checkSvg.setAttribute('height', '18');
       checkSvg.setAttribute('viewBox', '0 0 24 24');
       checkSvg.setAttribute('fill', 'none');
-      checkSvg.setAttribute('stroke', CapSVG.luminancia(c.hex) > 0.5 ? '#14264B' : '#FFFFFF');
+      checkSvg.setAttribute('stroke', CapSVG.luminancia(c.hex) > 0.5 ? '#111215' : '#FFFFFF');
       checkSvg.setAttribute('stroke-width', '3');
       checkSvg.setAttribute('stroke-linecap', 'round');
       checkSvg.setAttribute('aria-hidden', 'true');
@@ -651,7 +652,7 @@
       check.setAttribute('height', '14');
       check.setAttribute('viewBox', '0 0 24 24');
       check.setAttribute('fill', 'none');
-      check.setAttribute('stroke', CapSVG.luminancia(c.hex) > 0.5 ? '#14264B' : '#FFFFFF');
+      check.setAttribute('stroke', CapSVG.luminancia(c.hex) > 0.5 ? '#111215' : '#FFFFFF');
       check.setAttribute('stroke-width', '3.5');
       check.setAttribute('stroke-linecap', 'round');
       check.setAttribute('aria-hidden', 'true');
@@ -1278,7 +1279,7 @@
     p.colores.forEach(function (cv) {
       const cd = colorPorId(cv.id);
       const isActive = cv.id === estado.colorModal;
-      const contrastStroke = CapSVG.luminancia(cd.hex) > 0.5 ? '#14264B' : '#FFFFFF';
+      const contrastStroke = CapSVG.luminancia(cd.hex) > 0.5 ? '#111215' : '#FFFFFF';
       html += '<button class="dialog-color-swatch' + (isActive ? ' dialog-color-swatch--active' : '') +
         '" role="radio" aria-checked="' + (isActive ? 'true' : 'false') +
         '" aria-label="' + esc(cd.nombre) + '" data-color="' + esc(cv.id) + '"' +
@@ -1390,11 +1391,25 @@
 
   function construirWaProducto(p, colorNombre) {
     const plantilla = p.disponible ? CONFIG.mensajes.producto : CONFIG.mensajes.agotada;
+
+    // Si la página está publicada en línea (HTTP/HTTPS) o hay CONFIG.url, adjuntamos el enlace para la foto en WhatsApp
+    let enlace = '';
+    try {
+      let base = CONFIG.url || '';
+      if (!base && typeof window !== 'undefined' && window.location && window.location.protocol.startsWith('http')) {
+        base = window.location.origin + window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+      }
+      if (base) {
+        enlace = base + '/?producto=' + encodeURIComponent(p.id);
+      }
+    } catch (e) {}
+
     return armarEnlaceWhatsApp(plantilla, {
       nombre: p.nombre,
       color: colorNombre,
       precio: formatearPrecio(p.precio),
-      marca: CONFIG.marca
+      marca: CONFIG.marca,
+      enlace: enlace ? ('\nVer gorra: ' + enlace) : ''
     });
   }
 
