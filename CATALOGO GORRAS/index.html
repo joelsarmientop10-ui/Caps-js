@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caps js: gorras snapback, trucker, dad hat y más</title>
+  <meta name="description" content="Catálogo de gorras snapback, trucker, dad hat, beisbolera y bucket. Elige tu color, mira el detalle y pide por WhatsApp.">
+  <meta name="theme-color" content="#14264B">
+
+  <!-- Canonical y SEO -->
+  <link rel="canonical" href="">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Caps js: gorras snapback, trucker, dad hat y más">
+  <meta property="og:description" content="Catálogo de gorras snapback, trucker, dad hat, beisbolera y bucket. Elige tu color, mira el detalle y pide por WhatsApp.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="assets/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Caps js: gorras snapback, trucker, dad hat y más">
+  <meta name="twitter:description" content="Catálogo de gorras snapback, trucker, dad hat, beisbolera y bucket. Elige tu color, mira el detalle y pide por WhatsApp.">
+  <meta name="twitter:image" content="assets/og-image.png">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Archivo variable -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Enlace de salto (visible solo al recibir foco) -->
+  <a href="#catalogo" class="skip-link">Saltar al catálogo</a>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       ENCABEZADO
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- Logo -->
+      <a href="#inicio" class="header__logo" aria-label="Caps js — inicio">
+        <img class="header__logo-icon" src="assets/logo.jpg" alt="" aria-hidden="true" width="36" height="36">
+        <span class="header__logo-text">Caps js</span>
+      </a>
+
+      <!-- Navegación escritorio -->
+      <nav class="header__nav" aria-label="Principal">
+        <a href="#catalogo" class="header__nav-link">Catálogo</a>
+        <a href="#como-pedir" class="header__nav-link">Cómo pedir</a>
+        <a href="#preguntas" class="header__nav-link">Preguntas</a>
+        <a href="#contacto" class="header__nav-link">Contacto</a>
+        <a href="#" class="btn btn--whatsapp header__cta" data-wa aria-label="Pedir por WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Pedir por WhatsApp
+        </a>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button class="header__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <span>Menú</span>
+      </button>
+    </div>
+
+    <!-- Menú móvil (panel a pantalla completa) -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu__inner">
+        <button class="mobile-menu__close" id="menu-close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+          Cerrar menú
+        </button>
+        <nav class="mobile-menu__nav" aria-label="Menú principal">
+          <a href="#catalogo" class="mobile-menu__link">Catálogo</a>
+          <a href="#como-pedir" class="mobile-menu__link">Cómo pedir</a>
+          <a href="#preguntas" class="mobile-menu__link">Preguntas</a>
+          <a href="#contacto" class="mobile-menu__link">Contacto</a>
+        </nav>
+        <a href="#" class="btn btn--whatsapp mobile-menu__wa" data-wa>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <main id="contenido">
+
+    <!-- ─── INICIO INTERACTIVO ──────────────────────────────────────────────── -->
+    <section class="hero" id="inicio" aria-label="Inicio">
+      <div class="container hero__container">
+
+        <!-- Columna izquierda: textos -->
+        <div class="hero__content">
+          <h1 class="hero__title">Gorras para todos los días, en el color que quieras.</h1>
+          <p class="hero__sub">Snapback, trucker, dad hat, beisbolera y bucket. Cambia el color de la gorra y mírala antes de pedirla.</p>
+          <div class="hero__ctas">
+            <a href="#catalogo" class="btn btn--primary hero__btn-main">Ver el catálogo</a>
+            <a href="#catalogo" class="btn btn--secondary hero__btn-color" id="hero-color-btn">Ver las gorras en rojo</a>
+          </div>
+          <ul class="hero__trust">
+            <li class="hero__trust-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                <path d="M16 8h4a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2v-2"/>
+                <circle cx="6.5" cy="21" r="1.5"/>
+                <circle cx="18.5" cy="21" r="1.5"/>
+              </svg>
+              Envíos a todo el país
+            </li>
+            <li class="hero__trust-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+              </svg>
+              Cambios fáciles
+            </li>
+            <li class="hero__trust-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+              Costuras reforzadas
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha: escenario + selector -->
+        <div class="hero__right">
+          <!-- Escenario: JS inyecta la gorra y la palabra gigante -->
+          <div class="hero__stage" id="hero-stage">
+            <!-- La palabra 'gorras', la sombra y el botón de la gorra los inyecta app.js -->
+          </div>
+          <!-- Selector de colores: JS lo construye -->
+          <div class="hero__picker" id="hero-picker">
+            <!-- JS inyecta el radiogroup -->
+          </div>
+          <p class="hero__hint" id="hero-hint" hidden>Toca la gorra o elige un color</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── CATÁLOGO ────────────────────────────────────────────────────────── -->
+    <section class="catalog" id="catalogo" aria-label="Catálogo de gorras">
+      <div class="container">
+        <h2 class="catalog__title" tabindex="-1">Catálogo</h2>
+        <p class="catalog__summary" id="catalog-summary">14 gorras en 5 tipos y 8 colores.</p>
+
+        <!-- Filtros -->
+        <div class="filters" id="filters">
+          <!-- Búsqueda y orden -->
+          <div class="filters__top">
+            <div class="filters__search-wrap">
+              <label for="search-input" class="visually-hidden">Buscar gorras</label>
+              <svg class="filters__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+              </svg>
+              <input type="search" id="search-input" class="filters__search" placeholder="Buscar por nombre, tipo o color" autocomplete="off">
+              <button class="filters__clear-search" id="clear-search" hidden aria-label="Borrar búsqueda">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="filters__sort-wrap">
+              <label for="sort-select" class="filters__sort-label">Ordenar por</label>
+              <select id="sort-select" class="filters__sort">
+                <option value="destacadas">Destacadas</option>
+                <option value="nuevas">Más nuevas</option>
+                <option value="precio-asc">Precio: de menor a mayor</option>
+                <option value="precio-desc">Precio: de mayor a menor</option>
+                <option value="nombre">Nombre: de A a Z</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Filtro por tipo -->
+          <div class="filters__row">
+            <span class="filters__label">Tipo</span>
+            <div class="filters__chips-wrap">
+              <div class="filters__chips" id="type-filters" role="group" aria-label="Filtrar por tipo">
+                <button class="chip chip--active" data-type="" aria-pressed="true">Todos los tipos</button>
+                <button class="chip" data-type="snapback" aria-pressed="false">Snapback</button>
+                <button class="chip" data-type="trucker" aria-pressed="false">Trucker</button>
+                <button class="chip" data-type="dad" aria-pressed="false">Dad hat</button>
+                <button class="chip" data-type="beisbolera" aria-pressed="false">Beisbolera</button>
+                <button class="chip" data-type="bucket" aria-pressed="false">Bucket</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filtro por color -->
+          <div class="filters__row">
+            <span class="filters__label">Color</span>
+            <div class="filters__chips-wrap">
+              <div class="filters__colors" id="color-filters" role="radiogroup" aria-label="Color">
+                <button class="chip chip--active" data-color="" aria-pressed="true" role="radio" aria-checked="true">Todos</button>
+                <!-- JS inyecta las 8 muestras de color -->
+              </div>
+            </div>
+            <button class="btn-text filters__clear" id="clear-filters" hidden>Limpiar filtros</button>
+          </div>
+        </div>
+
+        <!-- Contador de resultados -->
+        <p class="catalog__count" id="catalog-count" role="status" aria-live="polite">14 gorras</p>
+
+        <!-- Cuadrícula de productos -->
+        <ul class="product-grid" id="product-grid" aria-label="Gorras">
+          <!-- JS renderiza las tarjetas -->
+        </ul>
+
+        <!-- Estado sin resultados -->
+        <div class="no-results" id="no-results" hidden>
+          <h3 class="no-results__title">No hay gorras con esos filtros.</h3>
+          <p class="no-results__text" id="no-results-text">Quita un filtro o limpia todos para ver las 14 gorras.</p>
+          <button class="btn btn--secondary" id="no-results-clear">Limpiar filtros</button>
+        </div>
+
+        <!-- Paginación -->
+        <div class="pagination" id="pagination" hidden>
+          <p class="pagination__info" id="pagination-info">Mostrando 12 de 14</p>
+          <button class="btn btn--secondary pagination__btn" id="load-more">Mostrar más gorras</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CÓMO PEDIR ───────────────────────────────────────────────────────── -->
+    <section class="how-to" id="como-pedir" aria-label="Cómo pedir">
+      <div class="container">
+        <h2 class="how-to__title">Cómo pedir</h2>
+        <ol class="how-to__steps">
+          <li class="how-to__step">
+            <span class="how-to__num" aria-hidden="true">1</span>
+            <div class="how-to__text">
+              <strong class="how-to__step-title">Elige tu gorra</strong>
+              <p>Filtra por tipo o color y abre el detalle.</p>
+            </div>
+          </li>
+          <li class="how-to__step">
+            <span class="how-to__num" aria-hidden="true">2</span>
+            <div class="how-to__text">
+              <strong class="how-to__step-title">Escríbenos por WhatsApp</strong>
+              <p>El mensaje sale escrito con la gorra y el color que elegiste.</p>
+            </div>
+          </li>
+          <li class="how-to__step">
+            <span class="how-to__num" aria-hidden="true">3</span>
+            <div class="how-to__text">
+              <strong class="how-to__step-title">Confirma y recibe</strong>
+              <p>Te decimos stock, envío y forma de pago. Cuando pagas, la despachamos.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ─── PREGUNTAS FRECUENTES ─────────────────────────────────────────────── -->
+    <section class="faq" id="preguntas" aria-label="Preguntas frecuentes">
+      <div class="container">
+        <h2 class="faq__title">Preguntas frecuentes</h2>
+        <div class="faq__list">
+
+          <details class="faq__item" name="faq">
+            <summary class="faq__question">
+              ¿Cómo hago mi pedido?
+              <svg class="faq__icon faq__icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg class="faq__icon faq__icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </summary>
+            <p class="faq__answer">Elige tu gorra y su color, toca "Pedir por WhatsApp" y te respondemos con el stock, el valor del envío y las formas de pago.</p>
+          </details>
+
+          <details class="faq__item" name="faq">
+            <summary class="faq__question">
+              ¿Hacen envíos?
+              <svg class="faq__icon faq__icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg class="faq__icon faq__icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </summary>
+            <p class="faq__answer">Sí, enviamos a todo el país. El valor y el tiempo dependen de tu ciudad y te los confirmamos por WhatsApp antes de que pagues.</p>
+          </details>
+
+          <details class="faq__item" name="faq">
+            <summary class="faq__question">
+              ¿Cuánto tarda en llegar?
+              <svg class="faq__icon faq__icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg class="faq__icon faq__icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </summary>
+            <p class="faq__answer">Entre 2 y 5 días hábiles después de confirmar el pago.</p>
+          </details>
+
+          <details class="faq__item" name="faq">
+            <summary class="faq__question">
+              ¿Puedo cambiar la gorra si no me queda?
+              <svg class="faq__icon faq__icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg class="faq__icon faq__icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </summary>
+            <p class="faq__answer">Sí. Tienes 15 días para cambiarla si está sin usar y con su etiqueta.</p>
+          </details>
+
+          <details class="faq__item" name="faq">
+            <summary class="faq__question">
+              ¿Qué formas de pago aceptan?
+              <svg class="faq__icon faq__icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg class="faq__icon faq__icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </summary>
+            <p class="faq__answer">Transferencia, tarjeta y pago contra entrega en ciudades seleccionadas.</p>
+          </details>
+
+          <details class="faq__item" name="faq">
+            <summary class="faq__question">
+              ¿Cómo sé qué talla elegir?
+              <svg class="faq__icon faq__icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              <svg class="faq__icon faq__icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </summary>
+            <p class="faq__answer">Las snapback, trucker y dad hat son de talla única ajustable (de 54 a 60 cm). Las beisbolera y las bucket vienen en S/M y L/XL: mide con una cinta métrica el contorno de tu cabeza, justo por encima de las cejas.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACTO ──────────────────────────────────────────────────────────── -->
+    <section class="contact" id="contacto" aria-label="Contacto">
+      <div class="container">
+        <h2 class="contact__title">¿No ves la gorra que buscas?</h2>
+        <p class="contact__sub">Escríbenos y te mostramos más modelos y colores.</p>
+        <div class="contact__ctas">
+          <a href="#" class="btn btn--whatsapp" data-wa>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Pedir por WhatsApp
+          </a>
+          <a href="#" class="btn btn--secondary btn--light" data-mail>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Escribir un correo
+          </a>
+        </div>
+        <ul class="contact__info">
+          <li class="contact__info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="#" class="contact__link" data-mail id="contact-email-link">hola@capsjs.co</a>
+          </li>
+          <li class="contact__info-item" id="contact-ig-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            <a href="#" class="contact__link" data-ig target="_blank" rel="noopener noreferrer">@capsjs.co</a>
+          </li>
+          <li class="contact__info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span id="contact-horario">Lunes a sábado, de 9:00AM a 8:00PM</span>
+          </li>
+          <li class="contact__info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2v-2"/>
+              <circle cx="6.5" cy="21" r="1.5"/>
+              <circle cx="18.5" cy="21" r="1.5"/>
+            </svg>
+            <span id="contact-cobertura">Envíos a todo el país</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       PIE DE PÁGINA
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <a href="#inicio" class="footer__logo" aria-label="Caps js — inicio">
+        <img class="footer__logo-icon" src="assets/logo.jpg" alt="" aria-hidden="true" width="32" height="32">
+        <span>Caps js</span>
+      </a>
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#catalogo" class="footer__link">Catálogo</a>
+        <a href="#como-pedir" class="footer__link">Cómo pedir</a>
+        <a href="#preguntas" class="footer__link">Preguntas</a>
+        <a href="#contacto" class="footer__link">Contacto</a>
+      </nav>
+      <div class="footer__social">
+        <a href="#" data-ig class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Caps js" id="footer-ig">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer__copy">© <span id="footer-year">2026</span> Caps js. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       MODAL DE DETALLE
+  ══════════════════════════════════════════════════════════════════════════ -->
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+    <div class="product-dialog__inner">
+      <!-- Columna izquierda: imagen -->
+      <div class="product-dialog__left">
+        <div class="product-dialog__stage" id="dialog-stage">
+          <!-- JS inyecta la gorra -->
+        </div>
+        <div class="product-dialog__nav">
+          <button class="product-dialog__nav-btn" id="dialog-prev" aria-label="Gorra anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <span class="product-dialog__nav-pos" id="dialog-pos" aria-live="polite">1 de 14</span>
+          <button class="product-dialog__nav-btn" id="dialog-next" aria-label="Gorra siguiente">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Columna derecha: contenido -->
+      <div class="product-dialog__right" id="dialog-content">
+        <!-- JS inyecta el contenido -->
+      </div>
+
+      <!-- Botón cerrar -->
+      <button class="product-dialog__close" id="dialog-close" aria-label="Cerrar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Barra inferior fija (móvil) -->
+    <div class="product-dialog__bar" id="dialog-bar">
+      <span class="product-dialog__bar-price" id="dialog-bar-price"></span>
+      <a href="#" class="btn btn--whatsapp product-dialog__bar-wa" id="dialog-bar-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Pedir por WhatsApp
+      </a>
+    </div>
+  </dialog>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="#" class="fab-wa" id="fab-wa" data-wa aria-label="Pedir por WhatsApp" hidden>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- Sin JavaScript -->
+  <noscript>
+    <div style="position:fixed;inset:0;background:#F7F8F6;display:flex;align-items:center;justify-content:center;padding:24px;z-index:9999;font-family:system-ui,sans-serif;text-align:center">
+      <div>
+        <p style="font-size:1.125rem;color:#14264B;margin-bottom:16px">Este catálogo necesita JavaScript. Escríbenos por WhatsApp y te enviamos las fotos.</p>
+        <a href="https://wa.me/573108373303" style="display:inline-block;background:#FFC83D;color:#14264B;padding:14px 28px;border-radius:999px;font-weight:600;text-decoration:none">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </noscript>
+
+  <!-- Scripts (defer, en orden de dependencia) -->
+  <script src="js/config.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/cap-svg.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>
